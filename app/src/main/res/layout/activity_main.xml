@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B29B9B"
+    android:background="@drawable/col_bac"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="0dp"
-        android:background="@color/white"
+        android:background="@drawable/col_bac"
         android:id="@+id/toolbar">
 
         <RelativeLayout
@@ -36,8 +36,7 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_below="@id/toolbar"
         android:layout_marginTop="0dp"
-        android:background="@color/white"
-
+        android:background="@drawable/col_bac"
         app:tabIndicatorHeight="3.5dp"
         app:tabMode="scrollable"
         app:tabSelectedTextColor="#03A9F4"

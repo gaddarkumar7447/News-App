@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ public class Home extends Fragment {
     private RecyclerView recyclerViewOfHome;
     ArrayList<Model> modelArrayList;
     Adapter adapter;
+    private ProgressBar progressBar;
     String country = "in";
 
     @Nullable
@@ -30,20 +32,24 @@ public class Home extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_fragment, null);
         recyclerViewOfHome = view.findViewById(R.id.recyclerViewOfHome);
+        progressBar = view.findViewById(R.id.progress_horizontal);
         modelArrayList = new ArrayList<>();
         recyclerViewOfHome.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new Adapter(getContext(), modelArrayList);
         recyclerViewOfHome.setAdapter(adapter);
 
         findNews();
+        progressBar.setVisibility(View.VISIBLE);
         return view;
     }
+
     public void findNews(){
         ApiUtilities.getApiInterface().getNews(country,100,api).enqueue(new Callback<MainNews>() {
             @Override
             public void onResponse(Call<MainNews> call, Response<MainNews> response) {
                 if (response.isSuccessful()){
                     modelArrayList.addAll(response.body().getArticles());
+                    progressBar.setVisibility(View.INVISIBLE);
                     adapter.notifyDataSetChanged();
                 }
             }

@@ -3,6 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:id="@+id/progress_horizontal1"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/recyclerViewHeaths"
