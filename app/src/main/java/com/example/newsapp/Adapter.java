@@ -42,9 +42,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(context, WebView.class);
+                Intent intent = new Intent(context, WebView.class);
                 intent.putExtra("url", modelArrayList.get(position).getUrl());
-                context.startActivity(intent);*/
+                context.startActivity(intent);
             }
         });
 
