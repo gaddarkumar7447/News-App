@@ -19,8 +19,9 @@
             android:layout_height="match_parent">
             <TextView
                 android:layout_width="wrap_content"
-                android:text="News feed"
+                android:text="Breaking news"
                 android:textStyle="bold"
+                android:layout_marginTop="13dp"
                 android:textAlignment="center"
                 android:textSize="25sp"
                 android:textColor="#2095CA"

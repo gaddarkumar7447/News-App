@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //mainToolBarLayout = findViewById(R.id.main_toolbar_layout);
         mHome = findViewById(R.id.home);
         mScience = findViewById(R.id.science);
         mHealths = findViewById(R.id.healths);
@@ -55,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
     }
