@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import javax.xml.parsers.FactoryConfigurationError;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
-
     Context context;
     ArrayList<Model> modelArrayList;
 
@@ -32,10 +31,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.layout_item, null,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.layout_item, parent,false);
         return new ViewHolder(view);
     }
-
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {

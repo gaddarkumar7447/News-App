@@ -3,7 +3,6 @@ package com.example.newsapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     TabItem mHome, mScience, mHealths, mSport, mIntertenment, mTechnology;
     PageAdapter pageAdapter;
-    String api = "9545aa553d3e4c57a8198a737ecd6ab9";
+    /*String api = "9545aa553d3e4c57a8198a737ecd6ab9";*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

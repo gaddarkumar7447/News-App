@@ -37,7 +37,6 @@ public class Home extends Fragment {
         recyclerViewOfHome.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new Adapter(getContext(), modelArrayList);
         recyclerViewOfHome.setAdapter(adapter);
-
         findNews();
         progressBar.setVisibility(View.VISIBLE);
         return view;

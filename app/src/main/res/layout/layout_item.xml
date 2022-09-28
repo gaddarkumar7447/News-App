@@ -18,6 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
+            android:background="@drawable/bac_col"
             android:layout_height="match_parent">
 
             <TextView
@@ -86,3 +87,4 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
+

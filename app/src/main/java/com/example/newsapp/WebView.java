@@ -35,13 +35,10 @@ public class WebView extends AppCompatActivity {
             webView.callOnClick();
             flag = 1;
         }
+
         if (flag == 1){
             progressDialog.dismiss();
         }
-
-
-
-
 
     }
 }
