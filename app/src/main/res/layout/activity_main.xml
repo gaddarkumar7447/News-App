@@ -11,6 +11,7 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="0dp"
         android:background="#e6e6e6"
+        android:visibility="visible"
         android:id="@+id/toolbar">
 
         <RelativeLayout
@@ -21,6 +22,7 @@
                 android:layout_width="wrap_content"
                 android:text="Breaking news"
                 android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginTop="13dp"
                 android:textAlignment="center"
                 android:textSize="25sp"

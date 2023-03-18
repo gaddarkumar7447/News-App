@@ -1,4 +1,6 @@
-package com.example.newsapp;
+package com.example.newsapp.apiutilities;
+
+import com.example.newsapp.MainNews;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -14,22 +14,18 @@ import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
-    TabItem mHome, mScience, mHealths, mSport, mIntertenment, mTechnology;
+    /*TabItem mHome, mScience, mHealths, mSport, mIntertenment, mTechnology;*/
     PageAdapter pageAdapter;
     /*String api = "9545aa553d3e4c57a8198a737ecd6ab9";*/
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mHome = findViewById(R.id.home);
-        mScience = findViewById(R.id.science);
-        mHealths = findViewById(R.id.healths);
-        mSport = findViewById(R.id.sports);
-        mIntertenment = findViewById(R.id.intertenment);
-        mTechnology = findViewById(R.id.technology);
         tabLayout = findViewById(R.id.include);
         ViewPager viewPager = findViewById(R.id.fragment_Container);
+        toolbar = findViewById(R.id.toolbar);
 
         pageAdapter = new PageAdapter(getSupportFragmentManager(), 6);
         viewPager.setAdapter(pageAdapter);
@@ -44,17 +40,29 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+            public void onTabUnselected(TabLayout.Tab tab) {}
 
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {}
+        });
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if (position == ViewPager.SCROLL_STATE_DRAGGING) {
+                    toolbar.setVisibility(View.GONE);
+                } else if (position == ViewPager.SCROLL_STATE_IDLE) {
+                    toolbar.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
-            public void onTabReselected(TabLayout.Tab tab) {
+            public void onPageSelected(int position) {}
 
-            }
+            @Override
+            public void onPageScrollStateChanged(int state) {}
         });
-
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
     }
 }

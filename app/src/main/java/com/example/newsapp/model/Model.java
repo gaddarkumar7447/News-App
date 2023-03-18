@@ -1,4 +1,4 @@
-package com.example.newsapp;
+package com.example.newsapp.model;
 
 public class Model {
     String author, title, description, url, urlToImage, publishedAt;

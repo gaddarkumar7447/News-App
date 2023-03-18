@@ -1,6 +1,4 @@
-package com.example.newsapp;
-
-import android.util.JsonReader;
+package com.example.newsapp.apiutilities;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

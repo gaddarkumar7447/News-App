@@ -1,5 +1,6 @@
 package com.example.newsapp;
 
+import com.example.newsapp.model.Model;
 import java.util.ArrayList;
 
 public class MainNews {

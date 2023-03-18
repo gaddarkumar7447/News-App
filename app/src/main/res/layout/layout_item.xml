@@ -26,11 +26,11 @@
                 android:id="@+id/mainHeading"
                 android:text="main heading display here main heading display here main heading display here main heading display here"
                 android:padding="5dp"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:textSize="20sp"
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_height="60dp"/>
 
             <LinearLayout
@@ -43,7 +43,8 @@
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:ellipsize="end"
-                    android:maxLines="7"
+                    android:maxLines="8"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:textColor="@color/black"
                     android:padding="5dp"
                     android:id="@+id/contenent"
@@ -51,14 +52,26 @@
                     android:text="main contenet main contenetmain contenetmain contenetmain contenetmain contenetmain contenetmain contenetmain contenetmain contenetmain contenetmain contenetmain contenetmaincontenetmain"
                     android:layout_height="match_parent"/>
 
-                <ImageView
-                    android:layout_width="match_parent"
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="190dp"
+                    android:cropToPadding="true"
                     android:padding="5dp"
-                    android:layout_weight="1"
-                    android:scaleType="centerCrop"
                     android:id="@+id/imageView"
+                    android:scaleType="fitXY"
                     android:src="@mipmap/ic_launcher"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
                     android:layout_height="match_parent"/>
+
+
+                <!--                <ImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:id="@+id/imageView"-->
+<!--                    android:background="@drawable/shape_image"-->
+<!--                    android:src="@mipmap/ic_launcher"-->
+<!--                    android:layout_height="match_parent"/>-->
 
             </LinearLayout>
 
