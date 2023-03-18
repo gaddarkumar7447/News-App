@@ -2,6 +2,8 @@
 
 - This Android App shows News in a RecyclerView fetching data from open-sourced APIs
 
+[Want to try the app](https://appetize.io/app/klmxq62bhaw4w64gu4gntorhza?device=pixel4&osVersion=11.0&scale=75)
+
 ## Screenshots
 <p align="center">
 
